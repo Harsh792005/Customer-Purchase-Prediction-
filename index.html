@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Purchase Prediction</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            width:450px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:20px;
+            color:#333;
+        }
+
+        p{
+            text-align:center;
+            margin-bottom:20px;
+            color:gray;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#28a745;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#218838;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Customer Purchase Prediction</h1>
+
+    <p>Enter Customer Details</p>
+
+    <form action="/predict" method="POST">
+
+        <input type="number" name="age" placeholder="Enter Age" required>
+
+        <input type="number" name="income" placeholder="Enter Income" required>
+
+        <input type="number" name="experience" placeholder="Enter Experience" required>
+
+        <input type="number" name="score" placeholder="Enter Score" required>
+
+        <button type="submit">
+            Predict
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
